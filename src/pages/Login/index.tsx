@@ -49,7 +49,9 @@ const Login = () => {
             errorMessage={errors?.password?.message}
           />
           <Spacing />
-          <Button title="Entrar" />
+          {isValid ? ( 
+            <Button title="Entrar" />
+          ) : <Button title="Aguardando email e senha..." />}
         </Column>
       </LoginContainer>
     </Container>
